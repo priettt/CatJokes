@@ -15,21 +15,24 @@
         android:layout_marginEnd="@dimen/cat_list_horizontal_margin"
         android:gravity="center"
         android:text="@string/cat_list_title"
+        android:fontFamily="sans-serif-thin"
         android:textSize="@dimen/cat_list_title_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/cat_list_horizontal_margin"
         android:layout_marginTop="@dimen/cat_list_recycler_view_top_margin"
         android:layout_marginEnd="@dimen/cat_list_horizontal_margin"
         app:layoutManager="LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
